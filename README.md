@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Animals
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React App was created as the 6th task for React.js as part of the Full Stack Web Development Program at [Business College Helsinki](https://en.bc.fi/qualifications/full-stack-web-developer-program/).
 
-## Available Scripts
+## Technologies used
 
-In the project directory, you can run:
+Built with:
 
-### `npm start`
+- HTML
+- JS
+- CSS
+- Reactjs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup and usage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Inside a cloned directory/folder, run:
 
-### `npm test`
+```bash
+npm install
+npm install axios
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Acknowledgment
 
-### `npm run build`
+Mentor: Margit Tennosaar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- GitHub @margittennosaar
+- [LinkedIn](https://www.linkedin.com/in/margittennosaar/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In this task use ONLY function components, axios and hooks useState and useEffect.
 
-### `npm run eject`
+1. Get yourself a base app (https://github.com/margittennosaar/animals). You can reuse some previous apps or create a new project which is containing components for Header, Main and Footer.
+2. Add new function component Weather which is displayed inside the Header component.
+3. Create a user to yourself in http://api.weatherstack.com/current and receive a personal access key.
+4. Use Access key and get data about current weather in Helsinki. Note! Do not hardcode your key into code. Use an environment variable to save and hide the key.
+5. Use Animal.json from https://public.bc.fi/tenma/animals.json and set up local json-server which is running on localhost:3001
+6. Make three new function components AnimalsList, AnimalCard and NewAnimal.
+   1. **AnimalsList** is the parent component for AnimalCard and NewAnimal components. It contains a list of all animalswhich you GET from animal.json. Map results using AnimalCard component.
+   2. **AnimalCard** component is presentational component for one card only. Display name, class, description, image and “read more” link. Limit description to max 15 words.
+   3. **NewAnimal** is a form where you can enter and POST new animals to animal.json. For form use correct inputs, select with different options and textarea for description.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Today you practiced new hooks andgetting and posting data with axios. Well done!
