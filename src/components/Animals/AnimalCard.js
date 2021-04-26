@@ -10,7 +10,7 @@ const AnimalCard = ({ id, name, aclass, desc, img, link }) => {
 			<img src={img} alt={name} />
 			<h2>{name}</h2>
 			<p>{aclass}</p>
-			<p>{truncate(desc, 20)}</p>
+			<p>{truncate(desc, 20)} [...]</p>
 			<a href={link}>Read more</a>
 		</div>
 	);
