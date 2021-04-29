@@ -19,13 +19,10 @@ const Main = () => {
 	const API = "http://localhost:3001/animals";
 	useEffect(() => {
 		setIsLoading(true);
-		axios
-			.get(API)
-			.then((res) => {
-				setAnimals(res.data);
-				setIsLoading(false);
-			})
-			.then();
+		axios.get(API).then((res) => {
+			setAnimals(res.data);
+			setIsLoading(false);
+		});
 	}, []);
 
 	const valueChangeHandler = (e) => {
