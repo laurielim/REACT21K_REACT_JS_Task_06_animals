@@ -1,17 +1,8 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 
 import AnimalCard from "./AnimalCard";
 
-const AnimalsList = () => {
-	const [animals, setAnimals] = useState([]);
-
-	const API = "http://localhost:3001/animals";
-
-	useEffect(() => {
-		axios.get(API).then((res) => setAnimals(res.data));
-	}, []);
-
+const AnimalsList = ({ animals }) => {
 	return (
 		<div className='posts'>
 			{animals.map((animal) => {

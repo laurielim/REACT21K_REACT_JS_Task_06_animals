@@ -9,15 +9,16 @@ const params = {
 };
 
 const Weather = () => {
-	/* const [weather, setWeather] = useState({});
+	const [weather, setWeather] = useState({});
 	const [isLoading, setIsLoading] = useState(false);
+
 	useEffect(() => {
 		setIsLoading(true);
 		axios
 			.get(API, { params })
 			.then((res) => setWeather(res))
 			.then(setIsLoading(false));
-	}); */
+	});
 	return <div></div>;
 };
 
