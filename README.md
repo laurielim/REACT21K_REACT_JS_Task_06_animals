@@ -18,6 +18,7 @@ Inside a cloned directory/folder, run:
 ```bash
 npm install
 npm install axios
+npm install react-router-dom
 ```
 
 ## Acknowledgment
