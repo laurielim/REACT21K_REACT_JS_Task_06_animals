@@ -6,7 +6,7 @@ const Header = () => {
 	return (
 		<header>
 			<h1>Business College Helsinki</h1>
-			{/* <Weather /> */}
+			{<Weather />}
 		</header>
 	);
 };

@@ -1,25 +1,43 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API = "http://api.weatherstack.com/current";
-
 const params = {
-	access_key: process.env.REACT_APP_WEATHERSTACK_API_KEY,
+	access_key: process.env.REACT_APP_OPENWEATHER_API_KEY,
 	query: "Barcelona",
 };
 
 const Weather = () => {
 	const [weather, setWeather] = useState({});
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		setIsLoading(true);
-		axios
-			.get(API, { params })
-			.then((res) => setWeather(res))
-			.then(setIsLoading(false));
-	});
-	return <div></div>;
+		const getData = async () => {
+			const res = await axios(
+				`http://api.openweathermap.org/data/2.5/weather?q=${params.query}&units=metric&appid=${params.access_key}`
+			);
+			setWeather(res.data);
+			setIsLoading(false);
+		};
+		getData();
+	}, []);
+
+	if (isLoading) {
+		return (
+			<div>
+				<p>Wait, I am loading</p>
+			</div>
+		);
+	}
+
+	return (
+		<div>
+			<p>
+				Temperature in {weather.name} is {Math.round(weather.main.temp)} degrees
+				and it feels like {Math.round(weather.main.feels_like)}.
+			</p>
+		</div>
+	);
 };
 
 export default Weather;
